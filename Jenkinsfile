@@ -139,8 +139,7 @@ pipeline {
             echo 'Build Backend'
 
             dir ('./server'){
-                sh '''
-                //docker rm -f $(docker ps -aq)
+                sh '''               
                 docker run -p 80:80 -d server
                 '''
             }
